@@ -1,0 +1,7 @@
+#sidebar {
+    background-color: #222;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    min-width: 25%;
+  }

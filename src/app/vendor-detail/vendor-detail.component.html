@@ -1,0 +1,25 @@
+<div *ngIf="vendor">
+    <h2>{{vendor.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{vendor.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="vendor.name" placeholder="name"/>
+      </label>
+    </div>
+    <div>
+        <label>address:
+          <input [(ngModel)]="vendor.address" placeholder="address"/>
+        </label>
+      </div>
+      <div>
+          <label>services:</label>
+          <ul class="services">
+              <li *ngFor="let service of vendor.services;let i=index">
+                 <input [(ngModel)]="vendor.services[i]" placeholder="services"/>
+              </li>
+            </ul>
+        </div>
+      
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+  </div>
